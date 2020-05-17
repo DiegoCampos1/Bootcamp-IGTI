@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Escala de cores em RGB</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="header card-panel teal lighten-2">Bem vindo a geração de cores por RGB</div>
+  <div class="container">
+  <label for="Vermelho">(R) Vermelho:
+    <input id="inputRed"  type="range" min="0" max="255">
+    <input class="inputText" id="inputRedText" type="text" disabled>
+  </label>
+  <label for="Verde">(G) Verde:
+    <input id="inputGreen" type="range"  min="0" max="255">
+    <input class="inputText" id="inputGreenText"type="text" disabled>
+  </label>
+  <label for="Azul">(B) Azul:
+    <input id="inputBlue" type="range"  min="0" max="255">
+    <input class="inputText" id="inputBlueText" type="text" disabled>
+  </label>
+  <div class="containerDiv">
+  <div id="colorResult"></div>
+  <p id="valueColor"></p>
+  </div>
+</div>
+  <script src="script.js"></script>
+</body>
+</html>

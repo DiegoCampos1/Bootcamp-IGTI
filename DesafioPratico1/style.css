@@ -1,0 +1,38 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  }
+
+#colorResult {
+  background-color: black;
+  height: 200px;
+  width: 200px;
+  border: 1px solid #9e9e9e ;
+}
+
+.header{
+  font-size: 2em;
+  text-align: center;
+}
+
+.containerDiv {
+  margin-top: 17px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+label {
+  font-size: 1.5em;
+}
+
+.inputText {
+  text-align: center;
+}
+
+#valueColor{
+  font-size: 1.5em;
+}
