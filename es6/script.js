@@ -73,7 +73,7 @@ function doSort() {
       };
     })
     .filter((person) => {
-      return person.name.startsWith("A");
+      return person.name.startsWith("A"); // includes testa se existe o caracter
     })
     .sort((a, b) => {
       return a.name.localeCompare(b.name);
@@ -81,4 +81,34 @@ function doSort() {
   console.log(mappedPeople);
 }
 
-doSort();
+// doSort();
+
+function doSpread () {
+  const marriedMan = people.results.filter(person => person.name.title === 'Mr')
+  const marriedWoman = people.results.filter(person => person.name.title === 'Ms')
+ const marriedPeople = [...marriedMan, ...marriedWoman]
+ console.log(marriedPeople)
+ return marriedPeople;
+}
+
+// doSpread ()
+
+function doRest() {
+ console.log(infiniteSum(1,2))
+ console.log(infiniteSum(1,2, 100, 250, 5))
+}
+
+function infiniteSum (...numbers) {
+  return numbers.reduce ((acc, curr) => acc + curr, 0)
+}
+
+// doRest()
+
+function doDestructuring () {
+  const first = people.results[0]
+  const {username, password} = first.login
+  console.log(username)
+  console.log(password)
+}
+
+doDestructuring()
