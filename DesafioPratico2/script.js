@@ -64,20 +64,25 @@ function renderUsuarios(){
 }
 
 function renderEstatistica() {
+  let masc = 0;
+  let fem = 0;
+  let soma = 0;
+  
+
+  filter.forEach(usuario => {
+    const { gender , age } = usuario;
+    (gender === "female") ? fem += 1 : masc +=1;
+    soma += age
+  })
+  
   let estatiticasHTML = `
   <div>
     <h5>Estatísticas</h5>
+    <p>Sexo masculino: ${masc}</p>
+    <p>Sexo feminino: ${fem}</p>
+    <p>Soma das idades: ${soma}
+    <p>Média das idades: ${(soma/filter.length).toFixed(2)}
   </div>
   `
-  let masc = 0:
-  let fem = 0;
-  let soma = 0;
-  let media = 0;
-
-
-
-  console.log(filter)
+  tabEstatistica.innerHTML = estatiticasHTML
 }
-
-
-
