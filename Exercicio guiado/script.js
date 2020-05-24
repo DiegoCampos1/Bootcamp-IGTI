@@ -41,7 +41,6 @@ async function fetchCountries() {
       flag,
     }
   });
-
   render();
 }
 
@@ -114,10 +113,7 @@ function renderSummary() {
 
   const totalPopulation = formatNumber(favoriteCountries.reduce((acc, curr) => acc + curr.population, 0));
   totalPopulationsFavorites.textContent = totalPopulation;
-
 };
-
-
 
 function handleCountryButtons() {
   const countryButtons = Array.from(tabCountries.querySelectorAll('.btn'));

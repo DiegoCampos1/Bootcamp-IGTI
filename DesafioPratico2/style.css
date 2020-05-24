@@ -1,0 +1,12 @@
+.body {
+  
+}
+
+.form {
+  display: flex;
+}
+
+.pesquisa-container {
+  display: flex;
+  justify-content: space-around;
+}
