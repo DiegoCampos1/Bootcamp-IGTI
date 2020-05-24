@@ -20,6 +20,18 @@ async function fetchUsuarios() {
       age: dob.age,
       picture: picture.thumbnail
     }
+  });
+  render()
+}
+
+function render () {
+  doClick()
+}
+
+function doClick() {
+  
+  button.addEventListener('click', (event)=>{
+    console.log(input.value)
   })
-  console.log(allUsuarios)
+  
 }
