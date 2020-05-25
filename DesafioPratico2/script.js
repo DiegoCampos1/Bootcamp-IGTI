@@ -11,9 +11,12 @@ window.addEventListener("load", () => {
   fetchUsuarios();
 
   async function fetchUsuarios() {
+    await new Promise(resolve => setTimeout(resolve, 1000));
     const res = await fetch(
       "https://randomuser.me/api/?seed=javascript&results=100&nat=BR&noinfo"
     );
+    const loadRemove = () => document.querySelector('.loading').remove();
+  await new Promise(resolve => resolve(loadRemove()));
     const json = await res.json();
     allUsuarios = json.results.map((usuario) => {
       const { gender, name, dob, picture } = usuario;
@@ -28,11 +31,11 @@ window.addEventListener("load", () => {
   }
 
   function doButton() {
-    input.addEventListener('input', ()=>{
-      if(input.value != '') {
-        button.disabled = false
+    input.addEventListener("input", () => {
+      if (input.value != "") {
+        button.disabled = false;
       }
-    })
+    });
     doClick();
   }
 
@@ -53,16 +56,16 @@ window.addEventListener("load", () => {
   function renderUsuarios() {
     let usersHTML = `
   <div>
-  <h5>${filter.length} usuário(s) encontrado(s)</h5>
+  <h4>${filter.length} usuário(s) encontrado(s)</h5>
   `;
 
     filter.forEach((usuario) => {
       const { gender, name, age, picture } = usuario;
       let userHTML = `
       
-      <div>
-        <img src="${picture}" alt="${name}"
-        <p>${name}, ${age} anos </p>
+      <div class="user">
+        <img src="${picture}" alt="${name}">
+        <p class="dados-usuarios">${name}, ${age} anos </p>
       </div>        
     `;
       usersHTML += userHTML;
@@ -85,7 +88,7 @@ window.addEventListener("load", () => {
 
     let estatiticasHTML = `
   <div>
-    <h5>Estatísticas</h5>
+    <h4>Estatísticas</h5>
     <p>Sexo masculino: ${masc}</p>
     <p>Sexo feminino: ${fem}</p>
     <p>Soma das idades: ${soma}

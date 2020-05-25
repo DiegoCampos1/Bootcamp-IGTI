@@ -11,29 +11,31 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <h1>Pesquisa de usuários</h1>
-    <div>
-      
-        <div class="form input-field col s6">
-          <input id="input" type="text" class="validate" />
-          <label class="active" for="first_name2">Busca:</label>
-          <button id="button" class="waves-effect waves-light btn" disabled>button</button>
-        </div>
-      
+    <div class="container">
+      <p class="loading"></p>
+      <h1>Pesquisa de usuários</h1>
+      <div class="form input-field col s6">
+        <input id="input" type="text" class="validate" />
+        <label class="active" for="first_name2">Busca:</label>
+        <button id="button" class="waves-effect waves-light btn" disabled>
+          button
+        </button>
+      </div>
 
       <div class="pesquisa-container">
         <div class="encontrados">
           <div id="tabUsuarios">
-          <h5>Nenhum usuario filtrado</h5>
-        </div>
+            <h4>Nenhum usuário filtrado</h5>
+          </div>
         </div>
         <div class="estatisticas">
           <div id="tabEstatistica">
-          <h5>Nada a ser exibido</h5>
-        </div>
+            <h4>Nada a ser exibido</h5>
+          </div>
         </div>
       </div>
     </div>
+    
 
     <script src="script.js"></script>
   </body>
